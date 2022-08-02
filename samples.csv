@@ -1,0 +1,5 @@
+sample_file_name,sample_name,description,platform
+ENCFF019HRC-test,0hr_rep1,cosmos2022_pacbio_smk,PacBio_Sequel_II
+ENCFF676BYQ-test,0hr_rep2,cosmos2022_pacbio_smk,PacBio_Sequel_II
+ENCFF003OWX-test,72hr_rep1,cosmos2022_pacbio_smk,PacBio_Sequel_II
+ENCFF669LWV-test,72hr_rep2,cosmos2022_pacbio_smk,PacBio_Sequel_II

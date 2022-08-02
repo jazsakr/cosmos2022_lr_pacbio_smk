@@ -1,0 +1,33 @@
+experiment: c2c12_exp
+
+fastq: /data/class/cosmos-2022/PUBLIC/snakemake/fastqs/{samplename}.fastq
+
+sample:
+  sam: data/mapped/{samplename}.sam
+  bam: data/mapped/{samplename}.bam
+  bam_reversed: data/mapped/{samplename}_reversed.bam
+  sorted: data/mapped/{samplename}_sorted.sam
+  clean: data/processed/{samplename}_clean.sam
+  labeled: data/processed/{samplename}_labeled.sam
+
+reference:
+  mouse:
+    fa: /data/class/cosmos-2022/PUBLIC/snakemake/references/mm10_spikeins.fasta
+    fa_name: mm10_M21
+    gtf: /data/class/cosmos-2022/PUBLIC/snakemake/references/mm10_M21.gtf
+    gtf_name: gencode_M21
+    bed: /data/class/cosmos-2022/PUBLIC/snakemake/references/mm10_M21.bed
+    sj: /data/class/cosmos-2022/PUBLIC/snakemake/references/mm10_M21-sj.tsv
+
+packages:
+  transcriptclean: packages/TranscriptClean
+  talon: packages/TALON
+
+talon: 
+  talon_config: data/{exp}/{exp}_talon_config.csv
+  talon_db: data/{exp}/{exp}_talon.db
+  talon_read_annot: data/{exp}/{exp}_talon_read_annot.tsv
+  talon_ab: data/{exp}/{exp}_talon_abundance.tsv
+  talon_ab_f: data/{exp}/{exp}_talon_abundance_filtered.tsv
+  talon_list: data/{exp}/{exp}_talon-list.csv
+  talon_gtf: data/{exp}/{exp}_talon.gtf
